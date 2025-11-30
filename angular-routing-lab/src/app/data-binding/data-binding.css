@@ -1,131 +1,150 @@
-:host {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  font-family: "Winky Rough", sans-serif;
-  min-height: 100vh;
-  background: #fcefee;
-
-  background-image:
-    radial-gradient(circle at 20% 20%, #ffe6f0 15%, transparent 16%);
-  background-size: 120px 120px;
-  background-repeat: repeat;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cherry Bomb One', 'Winky Rough', sans-serif;
+  background: linear-gradient(135deg, #fff5fb, #ffeef7, #fefaff);
+  color: #7a6169;
 }
 
-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.floating-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+  Background: linear-gradient(135deg, #fff5fb, #ffeef7, #fefaff);
 }
 
-.passing {
-  color: green;
-  font-weight: bold;
+.floating-bg .circle {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  top: var(--y);
+  left: var(--x);
+  background: var(--color);
+  border-radius: 50%;
+  filter: blur(25px);
+  opacity: 0.7;
+  animation: floatAround 12s ease-in-out infinite;
+  animation-delay: var(--delay);
 }
 
-.failing {
-  color: red;
-  font-weight: bold;
+@keyframes floatAround {
+  0%   { transform: translate(0,0) scale(1); opacity: 0.6; }
+  50%  { transform: translate(30px,-40px) scale(1.1); opacity: 1; }
+  100% { transform: translate(0,0) scale(1); opacity: 0.6; }
 }
 
-.box {
-  border: 2px solid #9f87ff;
-}
-
-h1 {
-   font-family: "Winky Rough", sans-serif;;
-  font-size: 2.8rem;
-  color: #5a4fa3;
-  text-shadow: 2px 2px 6px rgba(150, 120, 255, 0.3);
-}
-
-h2 {
-   font-family: "Winky Rough", sans-serif;;
-  font-size: 2.0rem;
-  color: #5a4fa3;
-  text-shadow: 2px 2px 6px rgba(150, 120, 255, 0.3);
-}
-
-img {
+.wrapper {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(150, 120, 255, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 6px dotted #d6caff;
+  background: #ffffffcc; 
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(255, 182, 193, 0.3);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  animation: floaty 6s ease-in-out infinite;
 }
-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 14px 30px rgba(150, 120, 255, 0.3);
+
+@keyframes floaty {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
 }
+
+h1, h2 {
+  margin: 15px 0;
+  color: #5a414b;
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.5rem; margin-top: 20px; }
 
 p {
-  font-size: 1.1rem;
-  margin: 0.5rem 0;
-  text-align: center;
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #7a6169;
 }
 
 .highlighted {
-  background: linear-gradient(120deg, #fff59d, #ffd54f);
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-weight: bold;
-  box-shadow: 0 4px 12px rgba(255, 215, 90, 0.3);
+  background: #fff0f8;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border-left: 4px solid #ffb6d9;
 }
 
-input {
+input[type="text"] {
   padding: 10px 15px;
+  border: 2px solid #ffcae6;
   border-radius: 12px;
-  border: 2px solid #d6caff;
   outline: none;
-  font-size: 1rem;
-  margin: 1rem 0;
-  width: 250px;
-  text-align: center;
-  transition: 0.3s all ease;
-  font-family: 'Baloo 2', cursive;
+  font-size: 0.95rem;
+  transition: 0.25s ease;
+  color: #7a6169;
 }
-input:focus {
-  border-color: #5a4fa3;
-  box-shadow: 0 0 10px rgba(90, 79, 163, 0.3);
+
+input[type="text"]:focus {
+  border-color: #ff9ece;
+  box-shadow: 0 0 6px rgba(255, 182, 193, 0.4);
 }
 
 button {
-  margin: 0.5rem auto;
-  padding: 10px 20px;
+  padding: 8px 18px;
+  margin: 5px;
+  background: #ffc0df;
   border: none;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #d6caff, #9f87ff);
-  color: white;
-  font-weight: 200;
+  border-radius: 12px;
+  color: #7a6169;
+  font-weight: 600;
+  font-size: 0.9rem;
   cursor: pointer;
-  font-size: 1rem;
-  font-family: "Winky Rough", sans-serif;;
-  box-shadow: 0 6px 18px rgba(90, 79, 163, 0.2);
-  transition: all 0.3s ease;
-}
-
-.hello {
-  display: flex;
-  gap: 20px;
+  box-shadow: 0 3px 8px rgba(255, 182, 193, 0.35);
+  transition: 0.25s ease;
 }
 
 button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(90, 79, 163, 0.3);
+  background: #ffadd4;
+  transform: translateY(-2px) scale(1.03);
 }
 
-p + p {
-  font-size: 1.3rem;
-  color: #5a4fa3;
-  font-weight: 500;
-  margin-top: 1rem;
+button:active {
+  transform: translateY(0) scale(0.98);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+.passing {
+  background-color: #d0f0c0;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: #3a5f3d;
+  font-weight: 600;
 }
-:host {
-  animation: fadeIn 0.8s ease;
+
+.failing {
+  background-color: #ffd6e8;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: #74294a;
+  font-weight: 600;
+}
+
+.wrapper > * {
+  animation: floatContent 8s ease-in-out infinite;
+}
+
+@keyframes floatContent {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+img {
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.25);
+  margin: 15px 0;
 }

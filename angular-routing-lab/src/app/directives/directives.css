@@ -1,0 +1,201 @@
+.floating-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+  background: linear-gradient(135deg, #fff5fb, #ffeef7, #fefaff);
+}
+
+.floating-bg .circle {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  top: var(--y);
+  left: var(--x);
+  background: var(--color);
+  border-radius: 50%;
+  filter: blur(25px);
+  opacity: 0.7;
+  animation: floatAround 12s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
+@keyframes floatAround {
+  0%   { transform: translate(0,0) scale(1); opacity: 0.6; }
+  50%  { transform: translate(30px,-40px) scale(1.1); opacity: 1; }
+  100% { transform: translate(0,0) scale(1); opacity: 0.6; }
+}
+
+
+body {
+  background: linear-gradient(135deg, #fff5fb, #ffeef7, #fefaff);
+  font-family: "Poppins", "Nunito", sans-serif;
+  color: #4a3d47;
+}
+
+.wrapper {
+  width: 75%;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 25px;
+  border-radius: 20px;
+  background: #ffffffcc;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(255, 182, 193, 0.3);
+  text-align: center;
+  animation: floaty 6s ease-in-out infinite;
+}
+
+.wrapper::before {
+  content: "🐻‍❄️";
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+@keyframes floaty {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.wrapper table {
+  width: 100%;
+  margin: 25px 0;
+  border-collapse: collapse;
+  background: #fff7fc;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(255, 153, 204, 0.25);
+  animation: popIn 0.4s ease;
+  transition: all 0.3s ease;
+  padding: 10px;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.wrapper table thead {
+  background: linear-gradient(135deg, #ffd6e8, #ffe8f4, #ffecf9);
+}
+
+.h2 {
+  color: #4a3d47;
+}
+
+.wrapper table th,
+.wrapper table td {
+  padding: 15px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #4a3d47;
+}
+
+.wrapper table th {
+  font-weight: 700;
+  border-bottom: 2px solid #f4c2d7;
+}
+
+.wrapper table td {
+  border-bottom: 1px solid #f5dbe7;
+}
+
+.wrapper table tbody tr {
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wrapper table tbody tr:hover {
+  background: #fff0f8;
+  box-shadow: inset 0 0 10px rgba(255, 182, 193, 0.2);
+}
+
+.wrapper table:hover {
+  box-shadow: 0 0 12px 3px rgba(255, 153, 204, 0.35);
+  transform: scale(1.01);
+}
+
+.wrapper button {
+  padding: 8px 18px;
+  background: #ffc0df;
+  border: none;
+  border-radius: 12px;
+  color: #4a3d47;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(255, 182, 193, 0.35);
+  transition: 0.25s ease;
+}
+
+.wrapper button:hover {
+  background: #ffadd4;
+  transform: translateY(-3px) scale(1.03);
+}
+
+.wrapper button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.wrapper input[type="text"] {
+  padding: 10px 15px;
+  border: 2px solid #ffcae6;
+  border-radius: 12px;
+  background: white;
+  outline: none;
+  font-size: 0.95rem;
+  transition: 0.25s ease;
+}
+
+.wrapper input[type="text"]:focus {
+  border-color: #ff9ece;
+  box-shadow: 0 0 6px rgba(255, 182, 193, 0.4);
+}
+
+.wrapper ul li {
+  padding: 6px 0;
+  list-style: none;
+  font-size: 0.95rem;
+}
+
+.wrapper ul li::before {
+  content: "♡";
+  margin-right: 4px; 
+}
+
+.sticky-note {
+  background: #fff0f8;
+  padding: 12px 18px;
+  border-radius: 14px;
+  border-left: 6px solid #ffb6d9;
+  box-shadow: 0 4px 8px rgba(255, 182, 193, 0.25);
+  font-size: 0.95rem;
+  margin: 10px 0;
+  position: relative;
+  color:#4a3d47;
+}
+
+.sticky-note::after {
+  content: "✧";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 1.1rem;
+  color: #ff9cd0;
+  opacity: 0.8;
+}
+
+.wrapper table::after {
+  position: absolute;
+  font-size: 1.4rem;
+  right: 10px;
+  top: -10px;
+  opacity: 0.7;
+}

@@ -5,20 +5,20 @@
   margin: 30px auto;
   width: fit-content;
 
-  background: rgba(255, 255, 255, 0.25);
+  background: #ffffffcc;
   border-radius: 18px;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.4);
 
-  box-shadow: 0 12px 28px rgba(170, 140, 255, 0.18);
+  box-shadow: 0 12px 28px rgba(255, 182, 193, 0.18); /* softer pink shadow */
   animation: fadeIn 0.8s ease;
 }
 
 .nav-item {
   font-family: "Poppins", sans-serif;
   text-decoration: none;
-  color: #5a4fa3;
+  color: #7a6169; /* matching soft grayish-pink */
   font-weight: 600;
   font-size: 1.1rem;
 
@@ -30,16 +30,16 @@
 }
 
 .nav-item:hover {
-  background: rgba(215, 195, 255, 0.45);
-  color: #3b2f8f;
-  box-shadow: 0 6px 16px rgba(150, 120, 255, 0.25);
+  background: rgba(255, 182, 193, 0.45); /* soft pink hover */
+  color: #6f505a; /* slightly darker for hover */
+  box-shadow: 0 6px 16px rgba(255, 182, 193, 0.25);
   transform: translateY(-3px);
 }
 
 .nav-item.active {
-  background: linear-gradient(135deg, #e2d4ff, #ffe3f1);
-  color: #2b215e;
-  box-shadow: 0 6px 16px rgba(170, 140, 255, 0.3);
+  background: linear-gradient(135deg, #ffe3f1, #ffd6e8); /* pink gradient */
+  color: #5a414b; /* darker grayish-pink */
+  box-shadow: 0 6px 16px rgba(255, 182, 193, 0.3);
 }
 
 @keyframes fadeIn {
