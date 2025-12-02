@@ -43,7 +43,7 @@ body {
   margin: 50px auto;
   padding: 30px;
   border-radius: 20px;
-  background: #ffffffcc; 
+  background: #ffffffcc;
   backdrop-filter: blur(10px);
   box-shadow: 0 6px 20px rgba(255, 182, 193, 0.3);
   text-align: center;
