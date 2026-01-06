@@ -1,0 +1,119 @@
+/* General Section Styling */
+.join-us-section {
+  background-color: #f0f2f5; /* Soft background for the section */
+  padding: 80px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  max-width: 800px; /* Max width for the form */
+  margin: 0 auto; /* Center the section */
+}
+
+h2.text-primary {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #007bff; /* Primary blue color */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.text-secondary {
+  font-size: 1.1rem;
+  color: #555; /* Dark grey color for text */
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Form Container Styling */
+.form-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for the Form Container */
+.form-container:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Input Fields Styling */
+.form-control {
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff; /* Blue focus border */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Soft blue glow on focus */
+}
+
+/* Live Preview Section */
+.alert {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  padding: 20px;
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 20px;
+  border-radius: 10px; /* Rounded corners */
+}
+
+.alert strong {
+  font-weight: 600;
+}
+
+/* Submit Button Styling */
+button {
+  background-color: #28a745; /* Green background */
+  border: none;
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  width: 100%;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: translateY(-4px); /* Lift effect */
+}
+
+button:active {
+  transform: translateY(1px); /* Slight push effect on click */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .join-us-section {
+    padding: 60px 20px;
+  }
+
+  .form-container {
+    padding: 30px;
+  }
+
+  h2.text-primary {
+    font-size: 2rem;
+  }
+
+  .text-secondary {
+    font-size: 1rem;
+  }
+
+  .form-control {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
+
+  button {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,27 @@
+.hero-banner {
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1500') no-repeat center center;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5); /* This creates the dark transparent box in your photos */
+  padding: 40px;
+  width: 80%;
+  border-radius: 5px;
+}
+
+.banner-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 5px;
+  margin-top: 15px;
+}

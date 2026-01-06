@@ -1,0 +1,82 @@
+/* Navbar Styles */
+.navbar {
+  background-color: #1c3d5c;  /* Dark navy blue background */
+  padding: 15px 30px;  /* Vertical and horizontal padding */
+  border-bottom: 2px solid #1e2a38;  /* Subtle border for separation */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Soft shadow for depth */
+}
+
+.navbar .navbar-brand {
+  font-size: 1.8rem;  /* Larger brand name */
+  font-weight: 700;  /* Bold font for the brand */
+  color: #fff;  /* White text color */
+  text-transform: uppercase;  /* Uppercase letters for branding */
+  letter-spacing: 2px;  /* Spacing between letters for a sleek look */
+  text-decoration: none;  /* Remove underline */
+  transition: color 0.3s ease;
+  padding-top: 20px;
+}
+
+.navbar .navbar-brand:hover {
+  color: #ff6347;  /* Orange color on hover */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;  /* A bit larger font size for navigation links */
+  color: #f1f1f1;  /* Light gray text color */
+  text-transform: uppercase;  /* Uppercase text for consistency */
+  margin: 0 15px;  /* Spacing between links */
+  padding: 10px 15px;  /* Padding inside each nav link */
+  border-radius: 30px;  /* Rounded corners */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff;  /* White text color on hover */
+  background-color: #ff6347;  /* Orange background on hover */
+}
+
+.navbar-nav .nav-link.active {
+  color: #fff;  /* White text for active link */
+  background-color: #007bff;  /* Blue background for active state */
+  border-radius: 30px;  /* Ensures active state is rounded */
+}
+
+.navbar-nav .nav-link:focus {
+  outline: none;  /* Remove outline on focus */
+}
+
+@media (max-width: 991px) {
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-brand {
+    font-size: 1.6rem;  /* Adjust brand size on smaller screens */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1rem;  /* Adjust font size for mobile */
+    margin: 10px 0;  /* Stack links on smaller screens */
+    padding: 8px 12px;  /* Adjust padding */
+  }
+
+  .navbar-nav {
+    margin-top: 10px;
+    flex-direction: column;  /* Stack navbar items vertically on mobile */
+    align-items: flex-start;  /* Align to the left */
+  }
+}

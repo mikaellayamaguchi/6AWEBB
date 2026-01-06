@@ -1,0 +1,29 @@
+<div class="home-header">
+  <div class="header-overlay">
+    <h1 class="text-white">{{ title }}</h1>
+    <p class="text-white lead mb-4">{{ subtitle }}</p>
+    <button class="btn btn-light btn-lg rounded-pill px-5 fw-bold shadow" routerLink="/join-us">
+      Early-Bird Registration
+    </button>
+  </div>
+</div>
+
+<div class="container py-5">
+  <h2 class="text-center text-primary fw-bold mb-2">Global Research 2026</h2>
+  <p class="text-center text-muted mb-5">Join our Research Conferences around the Globe!</p>
+
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="col" *ngFor="let conference of conferences">
+      <div class="conference-card shadow-lg rounded-4">
+        <div class="card-bg" [style.backgroundImage]="'url(' + conference.image + ')'"></div>
+
+        <div class="card-overlay">
+          <span class="card-category">{{ conference.category }}</span>
+          <h5 class="card-title mt-2">{{ conference.city }}</h5>
+          <p class="card-text">{{ conference.description }}</p>
+          <button class="btn btn-sm btn-outline-light rounded-pill w-100 mt-2">View Event</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

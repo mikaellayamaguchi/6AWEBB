@@ -1,0 +1,33 @@
+<div class="about-section">
+  <div class="banner-container">
+    <img [src]="bannerImage" class="banner-img" alt="Conference Banner" />
+
+    <div class="banner-overlay">
+      <div class="banner-content text-center">
+        <h1 class="display-3 text-white">{{ title }}</h1>
+        <p class="lead text-white px-md-5">{{ bannerDescription }}</p>
+        <button class="btn btn-light btn-lg rounded-pill mt-3 shadow" routerLink="/about-more">Learn More</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h2 class="text-primary fw-bold mb-4">{{ aboutHeading }}</h2>
+        <p class="fs-5 text-dark mb-4" style="line-height: 1.8; text-align: justify;">{{ aboutDescription }}</p>
+
+        <div class="cta-card p-4 bg-white border rounded shadow-sm d-md-flex align-items-center justify-content-between">
+          <p class="mb-md-0 fw-bold">Exclusive Attendee Benefit:</p>
+          <button class="btn btn-success btn-lg rounded-pill px-5 shadow" (click)="onRegisterInterest()">
+            Click here to get a FREE Gift!
+          </button>
+        </div>
+
+        <div class="mt-5 text-muted border-start rounded-end">
+          {{ aboutDetails }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
