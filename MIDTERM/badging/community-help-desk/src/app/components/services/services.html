@@ -1,0 +1,18 @@
+<div class="page-container">
+  <h1>Available Services</h1>
+
+  <div class="search-wrapper">
+    <input [formControl]="searchControl" placeholder="Filter announcements..." class="modern-search">
+  </div>
+
+  <div class="grid-layout" *ngIf="filteredPosts$ | async as posts">
+    <div *ngFor="let post of posts" class="modern-card">
+      <div class="card-id">#{{ post.id }}</div>
+      <h3>{{ post.title | uppercase }}</h3>
+      <p>{{ post.body | truncate:90 }}</p>
+      <button class="card-btn" (click)="showDetails(post)">
+  View Details
+</button>
+    </div>
+  </div>
+</div>

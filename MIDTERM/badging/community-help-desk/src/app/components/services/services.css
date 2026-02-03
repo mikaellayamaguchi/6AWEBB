@@ -1,0 +1,76 @@
+.modern-search {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.modern-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #edf2f7;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.modern-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.05);
+}
+.card-id { color: #6366f1; font-weight: bold; font-size: 0.8rem; }
+.card-btn {
+  background: none;
+  border: 1px solid #6366f1;
+  color: #6366f1;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card-btn:hover {
+  background: #6366f1;
+  color: white;
+  box-shadow: 0 4px 6px rgba(99, 102, 241, 0.2);
+}
+
+.card-btn:active {
+  transform: scale(0.95);
+}
+
+.search-wrapper {
+  position: relative; /* Allows the icon to sit inside the input */
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color: #64748b;
+  pointer-events: none;
+}
+
+.modern-search {
+  width: 100%;
+  padding: 15px 20px 15px 45px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.modern-search:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}

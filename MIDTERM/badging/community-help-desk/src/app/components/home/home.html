@@ -1,0 +1,17 @@
+<div class="page-container">
+  <h1><i class="fa fa-home"></i> Home</h1>
+  <div class="welcome-section">
+    <h2>Welcome!</h2>
+    <p>This portal pulls remote records and shares them across pages.</p>
+  </div>
+
+  <hr>
+
+  <h3>Latest Updates</h3>
+  <ul class="post-list" *ngIf="latestPosts$ | async as posts">
+    <li *ngFor="let post of posts" class="update-item">
+      <strong>{{ post.title | uppercase }}</strong>
+      <p>{{ post.body }}</p>
+    </li>
+  </ul>
+</div>

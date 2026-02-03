@@ -1,0 +1,35 @@
+<div class="page-container">
+  <h1>Submit a Ticket</h1>
+
+  <div class="contact-split">
+    <div class="form-side">
+      <form #ticketForm="ngForm" (ngSubmit)="submitForm()">
+        <input name="name" [(ngModel)]="formData.name" placeholder="* Your Full Name" class="modern-search" required>
+
+        <input name="email" [(ngModel)]="formData.email" placeholder="* Email Address" class="modern-search" required type="email">
+
+        <textarea name="message" [(ngModel)]="formData.message" placeholder="* Describe the issue..." class="modern-search" rows="5"></textarea>
+
+        <button type="submit" [disabled]="!ticketForm.valid" class="submit-pill">
+          Create Ticket
+        </button>
+      </form>
+    </div>
+
+    <div class="preview-side">
+      <div class="ticket-preview">
+        <div class="ticket-header">Live Help Desk Ticket</div>
+        <div class="ticket-body">
+          <label>Requester Name</label>
+          <div class="val">{{ formData.name | uppercase }}</div>
+
+          <label>Contact Email</label>
+          <div class="val">{{ formData.email }}</div>
+
+          <label>Message Content</label>
+          <div class="val small">{{ formData.message | truncate:120 }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
