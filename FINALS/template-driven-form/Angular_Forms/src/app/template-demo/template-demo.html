@@ -1,0 +1,46 @@
+<div class="form-card">
+  <h2>{{ title }}</h2>
+
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <input class="input-box" type="text" name="username" [(ngModel)]="username" placeholder="Enter username" required>
+    <input class="input-box" type="email" name="email" [(ngModel)]="email" placeholder="Enter email" required email>
+    <input class="input-box" type="password" name="password" [(ngModel)]="password" placeholder="Enter password" required minlength="6">
+
+    <select class="input-box" name="role" [(ngModel)]="role" required>
+      <option value="" disabled selected>Select role</option>
+      <option value="admin">Admin</option>
+      <option value="user">User</option>
+      <option value="guest">Guest</option>
+    </select>
+
+    <div class="custom-field-group">
+      <label class="group-label">Gender:</label>
+      <input type="radio" id="male" name="gender" value="Male" [(ngModel)]="gender" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="Female" [(ngModel)]="gender" required>
+      <label for="female">Female</label>
+    </div>
+
+    <div class="custom-field-group">
+      <label class="group-label">Status:</label>
+      <input type="radio" id="permanent" name="status" value="Permanent" [(ngModel)]="status" required>
+      <label for="permanent">Permanent</label>
+      <input type="radio" id="probationary" name="status" value="Probationary" [(ngModel)]="status" required>
+      <label for="probationary">Probationary</label>
+    </div>
+
+    <textarea class="input-box" name="comments" [(ngModel)]="comments" placeholder="Comments (Notes)..." rows="3"></textarea>
+
+    <button class="btn" type="submit" [disabled]="!myForm.valid">Submit</button>
+  </form>
+
+  <div *ngIf="submitted" class="display-card">
+    <h3>Submitted Data:</h3>
+    <p><strong>Username:</strong> {{ username }}</p>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Role:</strong> {{ role }}</p>
+    <p><strong>Gender:</strong> {{ gender }}</p>
+    <p><strong>Status:</strong> {{ status }}</p>
+    <p><strong>Comments:</strong> {{ comments }}</p>
+  </div>
+</div>

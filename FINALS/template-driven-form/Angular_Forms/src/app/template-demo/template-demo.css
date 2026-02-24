@@ -1,0 +1,82 @@
+.form-card {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.input-box:focus {
+  outline: none;
+  border-color: #5b7cfa;
+}
+
+.custom-field-group {
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.group-label {
+  font-weight: bold;
+  margin-right: 15px;
+  width: 60px;
+}
+
+.custom-field-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+.custom-field-group label {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4f6cf7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:disabled {
+  background-color: #b5c2ff;
+  cursor: not-allowed;
+}
+
+.btn:hover:not(:disabled) {
+  background-color: #3b55d9;
+}
+
+.success-message {
+  margin-top: 15px;
+  color: #28a745;
+  text-align: center;
+  font-weight: bold;
+}
